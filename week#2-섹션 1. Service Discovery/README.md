@@ -5,7 +5,7 @@
 - 어떤 MSA 서비스가 어디에 위치해있는지 등록, 검색 등의 작업해주는 서비스
 - netflix eureka 등이 존재
 
-![image](images/Untitled.png)
+![image](images/Untitled.png) 
 
 Eureka Project 생성 
 
