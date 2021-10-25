@@ -137,7 +137,7 @@
 
      ###### < 참고사항> 
 
-     [ModelMapper 참고링크]: https://baek.dev/post/15/	"찾기 힘든 버그를 유발하는 Java DTO 컨버팅 노가다, 리팩토링하기"
+     > [ModelMapper 참고링크]: https://baek.dev/post/15/	"찾기 힘든 버그를 유발하는 Java DTO 컨버팅 노가다, 리팩토링하기"
 
      
 
