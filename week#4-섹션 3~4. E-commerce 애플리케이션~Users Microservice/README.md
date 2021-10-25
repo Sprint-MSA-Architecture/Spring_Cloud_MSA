@@ -137,7 +137,7 @@
 
      ###### < 참고사항> 
 
-     > [ModelMapper 참고링크]: https://baek.dev/post/15/	"찾기 힘든 버그를 유발하는 Java DTO 컨버팅 노가다, 리팩토링하기"
+     > [ModelMapper 참고링크](https://baek.dev/post/15/) "찾기 힘든 버그를 유발하는 Java DTO 컨버팅 노가다, 리팩토링하기"
 
      
 
@@ -254,7 +254,7 @@
 
        - ###### <참고사항> 왜 @Autowired로 바로 주입받지 않고 생성자로 사용하는지 
 
-         [생성자 주입과 @Autowired 주입 차이]: https://madplay.github.io/post/why-constructor-injection-is-better-than-field-injection	"생성자 주입을 @Autowired를 사용하는 필드 주입보다 권장하는 하는 이유"
+         [생성자 주입과 @Autowired 주입 차이](https://madplay.github.io/post/why-constructor-injection-is-better-than-field-injection	) "생성자 주입을 @Autowired를 사용하는 필드 주입보다 권장하는 하는 이유"
 
          
 
