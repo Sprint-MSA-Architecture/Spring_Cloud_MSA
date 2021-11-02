@@ -14,7 +14,7 @@
 
      <img src="https://user-images.githubusercontent.com/64065318/138687029-261b77a6-65df-4cf4-9343-54b8ab52450a.png">
 
-     - Configuration Service에는 3개 서비스에 대한 설정 저장하고 동적으로 참조하여 사용(yml 파일 사용 지양)
+     - Configuration Service에는 3개 서비스에 대한 설정 저장하고 동적으로 참조하여 사용(정적인 yml 파일 사용 지양)
      - 마이크로서비스 부하 분산/서비스 라우팅을 위해 Api Gateway Server 사용
 
   4. ##### 본래 서비스 구성도(참고사항)
@@ -91,7 +91,9 @@
      @Data
      ```
 
-     - @Data 지양해야하는 이유 :  객체가 서로를 참조할때 toString을 서로 계속 호출하면 무한 반복이 되기 때문. include/exclude 속성을 이용해서 toString() 작성 시에 포함하거나, 빼야 하지만 `@Data`는 설정이 불가능.
+     - **`@Data` 지양해야하는 이유**
+       1. 양방향 연관관계에서 @ToString 때문에 순환참조 : 객체가 서로를 참조할때 toString을 서로 계속 호출하면 무한 반복이 되기 때문. include/exclude 속성을 이용해서 toString() 작성 시에 포함하거나, 빼야 하지만 `@Data`는 설정이 불가능.
+       2. 안전하지 못한 `Setter` : 객체를 언제든 수정할 수 있기 때문에 객체의 안정성 보장 불가능 ex) '사용자의 실명'이 보장되어야 할 경우 Setter는 원척적으로 차단이 불가능
 
 4. ##### H2 Database
 
@@ -99,7 +101,7 @@
 
    - Embedded, Server-Client 가능
 
-   - 별도의 설치 없이 JPA 사용 가능
+   - `별도의 설치 없이 JPA 사용 가능`
 
    - yml 파일 설정
 
@@ -131,13 +133,13 @@
 
    - `UserEntity`: 실제 DB의 테이블과 매칭될 클래스. 즉, JPA(Java 코드에서 쿼리를 다루지 않고 API를 통해 통신)를 위한 객체
 
-   - CrudRepository 상속받아 사용하여 기본적인 CRUD문을 이용한 기능 구현
+     - CrudRepository 상속받아 사용하여 기본적인 CRUD문을 이용한 기능 구현
 
    - `ModelMapper`
 
-     ###### < 참고사항> 
+     ###### < 왜 ModelMapper를 써야하는건데? > 
 
-     > [ModelMapper 참고링크](https://baek.dev/post/15/) "찾기 힘든 버그를 유발하는 Java DTO 컨버팅 노가다, 리팩토링하기"
+     > [ModelMapper 참고링크]: https://baek.dev/post/15/	"찾기 힘든 버그를 유발하는 Java DTO 컨버팅 노가다, 리팩토링하기"
 
      
 
@@ -254,7 +256,7 @@
 
        - ###### <참고사항> 왜 @Autowired로 바로 주입받지 않고 생성자로 사용하는지 
 
-         [생성자 주입과 @Autowired 주입 차이](https://madplay.github.io/post/why-constructor-injection-is-better-than-field-injection	) "생성자 주입을 @Autowired를 사용하는 필드 주입보다 권장하는 하는 이유"
+         [생성자 주입과 @Autowired 주입 차이]: https://madplay.github.io/post/why-constructor-injection-is-better-than-field-injection	"생성자 주입을 @Autowired를 사용하는 필드 주입보다 권장하는 하는 이유"
 
          
 
@@ -287,6 +289,16 @@
      	}
      }
      ```
+
+   - **주의사항** : 먼저 정해진 값들은 불변의 값 (우선순위 있음)
+
+     ```java
+     // 모든 url에 대해 열어주는 설정이 뒤에 있더라도, user 페이지는 접속 불가
+     http.antMatchers("/user").authenticated()
+     		.antMatchers("/**").permitAll();
+     ```
+
+     
 
    - BcryptPasswordEncoder -> 상단 UserServiceImpl Class 참고
 
