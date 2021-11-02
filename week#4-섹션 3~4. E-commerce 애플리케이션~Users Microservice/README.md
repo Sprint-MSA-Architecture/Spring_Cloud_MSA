@@ -79,9 +79,9 @@
      ```java
      // 파라미터가 없는 기본 생성자를 생성
      @NoArgsConstructor
-     // 모든 필드 값을 파라미터로 받는 생성자
-     @RequiredArgsConstructor 
      // final이나 @NonNull인 필드 값만 파라미터로 받는 생성자
+     @RequiredArgsConstructor 
+     // 모든 필드 값을 파라미터로 받는 생성자
      @AllArgsConstructor 
      // toString 자동 생성,  exclude 속성을 사용시, 특정 필드를 toString() 결과에서 제외시킬 수 있음
      // 클래스명(필드1명=필드1값,필드2명=필드2값,...) 식으로 출력
