@@ -21,6 +21,9 @@ Spring Cloud로 개발하는 마이크로서비스 애플리케이션(MSA) 정�
 
 URL : https://developer-ecore.hyundaimotorgroup.com/api/display/COP
 
+## 강사님 강의 관련 코드 참고 URL
+
+URL : https://github.com/joneconsulting/msa_with_spring_cloud
 
 ## COP 계획 및 진도
 
