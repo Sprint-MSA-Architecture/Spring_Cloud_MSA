@@ -58,6 +58,11 @@
 ![image](src1/img12.png)
 - 매개변수로 userId를 받고 getUserByUserId에서 조회한 결과는 responseUser 클래스의 객체이기 때문에 이것을 다시 userDto로 받고 이것을 다시 ModelMapper를 통해 responseUser로 변환
 
+#### Path variable과 Query parameter의 적절한 사용
+- 일반적으로 /users/{userid}와 같이 리소스를 식별해야하는 경우는 path variable을 사용하고, /products?category=top과 같이 정렬 또는 필터 등의 조건을 사용하고 싶은 경우는 query parameter를 사용.
+- path variable로 요청한 경로에 해당하는 페이지가 없으면 404 에러를 발생시킴.
+- query parameter는 서버로 데이터가 넘어가고, 쿼리를 실행한 결과 조회된 데이터가 리턴되기 때문에 리턴 결과가 없을 경우 에러 핸들링이 필요.
+
 
 ### Users Microservice - 사용자 조회 ③
 
