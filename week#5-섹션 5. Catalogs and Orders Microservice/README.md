@@ -48,7 +48,7 @@
 
 
 ![image](src1/img10.png)
-- JPA를 사용하기 때문에 userRepository에서 findByUserId메서드를 구현해주고, 실행하면 select문의 where조건으로 userId를 조회하는 것과 같은 결과
+- CrudRepository를 상속받기 때문에 userRepository에서 findByUserId메서드를 정의만 해주면 select문의 where조건으로 userId를 조회하는 것과 같은 결과
 - ModelMapper를 사용하여 userEntity를 UserDto로 변환
 
 
@@ -94,7 +94,7 @@ public UserDto getUserByUserId(String userId) {
 
 @Override
 public Iterable<UserEntity> getUserByAll() {
-    // jpa를 사용하기 때문에 기본적으로 제공
+    // jpa에서 제공해주는 CrudRepository 인터페이스를 상속하기 때문에 기본적으로 제공
     return userRepository.findAll();
 }
 ```
