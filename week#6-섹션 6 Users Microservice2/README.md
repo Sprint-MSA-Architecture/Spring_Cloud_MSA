@@ -396,3 +396,4 @@ public class AuthorizationHeaderFilter extends AbstractGatewayFilterFactory<Auth
 - SpringWebflux, Mono, Flux - https://devuna.tistory.com/108
 - 세션과 쿠키, 토큰 - https://tofusand-dev.tistory.com/89
 - Jwt란? - https://mangkyu.tistory.com/56
+- token 기반 인증 - https://behonestar.tistory.com/37
