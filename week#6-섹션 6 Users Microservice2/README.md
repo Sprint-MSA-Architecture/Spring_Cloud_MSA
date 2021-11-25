@@ -292,7 +292,7 @@ AuthenticationFilter.java - successfulAuthentication() 구현
     }
 ```
 - Jwts 메소드를 사용해 스트링 토큰값을 생성한다.
-- userId를 subject로 설정, 토큰 만료기한(현재시간 + 1일, 밀리세컨드 단위), 문자열을 token.secret를 조합키로 사용하고 HS512알고리즘으로 암호화
+- userId를 subject로 설정, 토큰 만료기한(현재시간 + 1일, 밀리세컨드 단위), 문자열은 token.secret를 조합키로 사용하고 HS512알고리즘으로 암호화
 
 ![1](https://user-images.githubusercontent.com/52458791/142810287-5d0aede0-552e-4bfe-884b-f52176387f17.png)
 - 세션과 쿠키는 이기종간에 공유가 안됨(ex. 모바일 디바이스), 모바일 디바이스는 다른 언어로 개발되기도 하고 클라이언트가 자바가 아닌 언어로 개발되면 공유가 안됨
@@ -303,7 +303,7 @@ AuthenticationFilter.java - successfulAuthentication() 구현
 - 이전과는 다르게 JWT토큰을 발급해준다.
 - 토큰을 받은 클라이언트가 이를 이용해 다른 기능을 사용한다.
 
-###JWT란
+### JWT란
 - 인증 헤더 내에서 사용되는 토큰 포맷
 - 두 개의 시스템끼리 안전한 방법으로 통신 가능
 - https://jwt.io/ 사이트에서 토큰 값 변환 및 확인 가능
