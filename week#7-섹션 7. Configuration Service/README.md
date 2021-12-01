@@ -2,13 +2,13 @@
 
 ## 섹션7의 주요 내용
 
-- Spring Cloud Config
-- Local Git Repository
-- Microservice에 적용
-- Spring Boot Actuator
-- Profiles 적용 (개발,테스트,운영 환경에 맞춰서 구성정보 변경하여 적용)
-- Remote Git Repository
-- Native File Repository
+- [Spring Cloud Config](#spring-cloud-config란)
+- [Local Git Repository](#spring-cloud-config란)
+- [Microservice에 적용](#microservice에-적용-user-service--spring-cloud-gateway)
+- [Spring Boot Actuator](#spring-boot-actuator-설정)
+- [Profiles 적용 (개발,테스트,운영 환경에 맞춰서 구성정보 변경하여 적용)](#profiles을-사용한-configuration-적용)
+- [Remote Git Repository](#remote-git-repository)
+- [Native File Repository](#native-file-repository)
 
 ### Spring Cloud Config란?
 
