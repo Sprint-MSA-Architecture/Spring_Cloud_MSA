@@ -16,4 +16,4 @@
    - (AS-IS) P2P 방식 -> (T0-BE) Middleware 통해 안정적인 전달, 송신/수신측 상대방의 환경 상관없이 자신의 일만 할 수 있도록 변경
 
 
-![이미지1](../../../../../dev/Spring_Cloud_MSA/week#8-섹션 8. Spring Cloud Bus/images/이미지1.jpg)
+![이미지1](/images/이미지1.jpg)
