@@ -134,11 +134,12 @@ public String status() {
 
 ![Untitled](images/Untitled%2019.png)
 
+| EndPoint | 설명 |
+| --- | --- |
 | beans | applcation context에 포함된 bean들의 정보 학인 가능 |
 | health | service의 현 상태 확인 가능 |
 | refresh |  POST방식으로 API 호출하면  구성정보설정파일  refresh 해줌 |
-| httptrace | client 요청이 들어왔을 때 타 서비스들이 호출 확인 가능 ( spring cloud gateway에서 사용)
-추가로 HttpTraceRepository를 bean으로 등록해주어야 사용 가능  |
+| httptrace | client 요청이 들어왔을 때 타 서비스들이 호출 확인 가능 ( spring cloud gateway에서 사용) 추가로 HttpTraceRepository를 bean으로 등록해주어야 사용 가능  |
 
 ### **Profiles을 사용한 Configuration 적용**
 
