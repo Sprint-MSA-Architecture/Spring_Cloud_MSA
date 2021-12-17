@@ -47,19 +47,19 @@ git commit -m "Upload an application yaml file"
 
 ![Untitled](images/Untitled%203.png)
 
-1. Dependencies 추가
+2. Dependencies 추가
 
 ![Untitled](images/Untitled%204.png)
 
-1. [ConfigServiceApplication.java](http://ConfigServiceApplication.java) 파일 수정 
+3. [ConfigServiceApplication.java](http://ConfigServiceApplication.java) 파일 수정 
 
 ![Untitled](images/Untitled%205.png)
 
-1. project 내 applicaiton.yml 파일 수정 
+4. project 내 applicaiton.yml 파일 수정 
 
 ![Untitled](images/Untitled%206.png)
 
-1. 프로젝트 실행 후 웹 브라우저로 profile별 구성정보파일 확인 가능 
+5. 프로젝트 실행 후 웹 브라우저로 profile별 구성정보파일 확인 가능 
 
 ![Untitled](images/Untitled%207.png)
 
@@ -71,7 +71,7 @@ git commit -m "Upload an application yaml file"
 
 ![Untitled](images/Untitled%209.png)
 
-1. bootstrap.yml 추가 
+2. bootstrap.yml 추가 
     1. 서비스 내에서 읽어오고자하는 configuration 정보의 위치를 지정
     2. applicaton.yml 보다 이르게 정보를 불러와 주기 때문에 가장 먼저 적용 가능
         
@@ -80,11 +80,11 @@ git commit -m "Upload an application yaml file"
 
 ![Untitled](images/Untitled%2011.png)
 
-1. application.yml  파일에 token 정보 삭제
+3. application.yml  파일에 token 정보 삭제
 
 ![Untitled](images/Untitled%2012.png)
 
-1. 웹 브라우저에서 구성정보 확인 가능
+4. 웹 브라우저에서 구성정보 확인 가능
 
 ```java
 @GetMapping("/health_check")
@@ -99,7 +99,7 @@ public String status() {
 
 ![Untitled](images/Untitled%2013.png)
 
-1. ecommerce.yml 파일 변경 후 새로운 value 반영되는지 서비스 리부팅
+5. ecommerce.yml 파일 변경 후 새로운 value 반영되는지 서비스 리부팅
 
 ![Untitled](images/Untitled%2014.png)
 
@@ -118,7 +118,7 @@ public String status() {
 
 ![Untitled](images/Untitled%2016.png)
 
-1. 인증/인가 관련 예외 처리 추가 
+2. 인증/인가 관련 예외 처리 추가 
 - User Service
     - [WebSecurity.java](http://WebSecurity.java)의  config method 로직 변경
     - 별도 인증/인가 권한 처리 없이 접근할 수 있도록 설정
@@ -130,7 +130,7 @@ public String status() {
 
 ![Untitled](images/Untitled%2018.png)
 
-1. applicatoin.yml 파일에 포함시키고자하는 EndPoint 명시
+3. applicatoin.yml 파일에 포함시키고자하는 EndPoint 명시
 
 ![Untitled](images/Untitled%2019.png)
 
@@ -155,7 +155,7 @@ public String status() {
 
 ![Untitled](images/Untitled%2022.png)
 
-1. 각 서비스 bootstrap.yml 파일에 active profile 지정 
+2. 각 서비스 bootstrap.yml 파일에 active profile 지정 
     1. bootstrap.yml 파일에 active profile을 지정하게 되면 해당 환경에서 서비스를 기동하겠다는 의미. 따라서 해당 환경에 맞는 application.yml 파일을 읽어오게 된다. (없으면 default yaml file)
     2. intellij 내에서도 active profile 지정 후 서비스 기동 가능 ( + java command, application.yml 파일로도 가능)
 
@@ -186,7 +186,7 @@ git push --set-upsteam origin master  # 최초 push일 경우 --set-upstream
 
 ![Untitled](images/Untitled%2025.png)
 
-1. config server service에 uri를 remote 레포 주소로 변경 
+2. config server service에 uri를 remote 레포 주소로 변경 
 
 ![Untitled](images/Untitled%2026.png)
 
